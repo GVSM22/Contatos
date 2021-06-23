@@ -3,4 +3,5 @@
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
     <string name="remover">Remover</string>
+    <string name="userimage">Imagem que representa o perfil do usuário</string>
 </resources>

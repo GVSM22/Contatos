@@ -23,6 +23,15 @@
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
 
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ligar"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+    </Button>
+
 
     <Button
         android:id="@+id/save_button"

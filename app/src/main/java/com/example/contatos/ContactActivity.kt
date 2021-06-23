@@ -15,7 +15,9 @@ class ContactActivity : AppCompatActivity() {
         val callBtn: Button = findViewById(R.id.callButton)
 
         callBtn.setOnClickListener {
-            val newIntent = Intent(Intent.ACTION_DIAL, Uri.parse(contact?.phoneNumber?.trim()))
+            val newIntent = Intent(Intent.ACTION_DIAL)
+            val tel = contact?.phoneNumber?.trim()
+            newIntent.data = Uri.parse("tel:$tel")
             startActivity(newIntent)
         }
     }

@@ -36,7 +36,8 @@ class ContactQueries(context: Context) {
                 val id = getInt(getColumnIndex(BaseColumns._ID))
                 val name = getString(getColumnIndex(ContactDB.ContactEntity.NAME))
                 val urlPhoto = getString(getColumnIndex(ContactDB.ContactEntity.URL_PHOTO))
-                contacts.add(Contact(id, name, urlPhoto))
+                val phoneNumber = getString(getColumnIndex(ContactDB.ContactEntity.NUMBER))
+                contacts.add(Contact(id, name, urlPhoto, phoneNumber))
             }
         }
         return contacts
@@ -63,7 +64,8 @@ class ContactQueries(context: Context) {
                 val id = getInt(getColumnIndex(BaseColumns._ID))
                 val name = getString(getColumnIndex(ContactDB.ContactEntity.NAME))
                 val urlPhoto = getString(getColumnIndex(ContactDB.ContactEntity.URL_PHOTO))
-                contacts.add(Contact(id, name, urlPhoto))
+                val phoneNumber = getString(getColumnIndex(ContactDB.ContactEntity.NUMBER))
+                contacts.add(Contact(id, name, urlPhoto, phoneNumber))
             }
         }
         return contacts

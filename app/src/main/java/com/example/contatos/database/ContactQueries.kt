@@ -14,6 +14,7 @@ class ContactQueries(context: Context) {
         val values = ContentValues().apply {
             put(ContactDB.ContactEntity.NAME, contact.name)
             put(ContactDB.ContactEntity.URL_PHOTO, contact.urlPhoto)
+            put(ContactDB.ContactEntity.NUMBER, contact.phoneNumber)
         }
         return db.insert(ContactDB.ContactEntity.TABLE_NAME, null, values)
     }

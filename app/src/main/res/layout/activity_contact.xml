@@ -1,69 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/contactApelidoInsert"
+        android:layout_width="343dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactLabelApelido"></TextView>
+
+    <TextView
+        android:id="@+id/contactFoneInsert"
+        android:layout_width="283dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/callButton"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactLabelFone"></TextView>
+
+    <TextView
+        android:id="@+id/contactNomeInsert"
+        android:layout_width="343dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactLabelName"></TextView>
+
+    <TextView
+        android:id="@+id/contactLabelApelido"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactFoneInsert"
+        tools:text="Apelido:"></TextView>
+
+    <TextView
+        android:id="@+id/contactLabelFone"
+        android:layout_width="105dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactNomeInsert"
+        tools:text="Telefone:"></TextView>
+
+    <TextView
+        android:id="@+id/contactApelido"
+        android:layout_width="184dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contactPhoto"
+        app:layout_constraintTop_toTopOf="@+id/contactPhoto"></TextView>
 
     <ImageView
         android:id="@+id/contactPhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/contactFirstName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/userimage">
-    </ImageView>
+        android:layout_width="130dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/userimage"
+        app:layout_constraintEnd_toStartOf="@+id/contactApelido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
-        android:id="@+id/contactFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/contactPhoto"
-        app:layout_constraintTop_toTopOf="parent">
-    </TextView>
+        android:id="@+id/contactLabelName"
+        android:layout_width="79dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactPhoto"
+        tools:text="Nome:"></TextView>
 
     <Button
         android:id="@+id/callButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@android:drawable/ic_menu_call">
-    </Button>
-
+        android:layout_width="45dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="36dp"
+        android:background="@android:drawable/ic_menu_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactNomeInsert"></Button>
 
     <Button
         android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="201dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#00ff00"
+        android:text="@string/salvar"
         app:layout_constraintBottom_toTopOf="@+id/removeContact"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/cancel_button"
-        android:text="@string/salvar"
-        android:backgroundTint="#00ff00">
-    </Button>
+        app:layout_constraintRight_toLeftOf="@+id/cancel_button"></Button>
 
     <Button
         android:id="@+id/cancel_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/removeContact"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/save_button"
+        android:layout_width="201dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#eed202"
         android:text="@string/cancelar"
-        android:backgroundTint="#eed202">
-    </Button>
+        app:layout_constraintBottom_toTopOf="@+id/removeContact"
+        app:layout_constraintLeft_toRightOf="@+id/save_button"
+        app:layout_constraintRight_toRightOf="parent"></Button>
 
     <Button
         android:id="@+id/removeContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:backgroundTint="#7a0012"
         android:text="@string/remover"
-        android:backgroundTint="#7a0012">
-    </Button>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
